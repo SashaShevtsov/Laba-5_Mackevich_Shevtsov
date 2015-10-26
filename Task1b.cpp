@@ -55,7 +55,27 @@ bool isRight(char* string)
 	else
 		return false;
 }
+void test(char*a, bool ans)
+{
+	if (isRight(a) == ans)
+		cout << "kokokok" << endl;
+	else
+		cout << "smutachak" << endl;
+
+}
 int main()
 {
+	char a1[40] = "(1+4+8+8)*(2+2+8)=[1}={1}";
+	test(a1, false);
+	char a2[40] = "(a)+{[z]+a}+z";
+	test(a2, true);
+	char a3[10] = " ";
+	test(a3, true);
+	char a4[40] = "((({{{[[[]]]}}})))";
+	test(a4, true);
+	char a5[15] = "(2+2}*2=6";
+	test(a5, false);
+	char a6[40] = "(2+2)*2=8";
+	test(a6, true);
 	return 0;
 }
