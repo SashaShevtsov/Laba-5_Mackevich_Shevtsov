@@ -200,3 +200,25 @@ double getanswer(char* string)
 	}
 	return popfromStack(&top);
 }
+void test(char* a, double ans)
+{
+	if (getanswer(a) == ans)
+		cout << "Bravo!" << endl;
+	else
+		cout << "fuuuuuu" << endl;
+}
+int main()
+{
+	char a1[40] = "(1+4+8+8)*(2+2+8)";
+	test(a1, 252.);
+	char a2[40] = "2+2*2";
+	test(a2, 6.);
+	char a3[10] = "1";
+	test(a3, 1.);
+	char a4[40] = "(2+2)*2";
+	test(a4, 8.);
+	char a5[15] = "(2-1)*2/5*10";
+	test(a5, 4.);
+	char a6[40] = "(1+2)/2";
+	test(a6, 1.5);
+}
