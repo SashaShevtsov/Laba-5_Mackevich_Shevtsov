@@ -60,9 +60,32 @@ bool whatIsLove(char* str)
 			return false;
 		else return true;
 }
-
+void assert(char* string, bool answer)
+{
+	bool firstanswer = whatIsLove(string);
+	if (firstanswer == answer)
+		cout << "OK" << endl;
+	else
+		cout << "False" << endl;
+}
+void tests()
+{
+	char string1[] = "dfdjfhjd(ndfmdnf(ndfmd)dnm)";
+	char string2[] = "ddmkssdsd";
+	char string3[] = "fh{f}fkd[dsd(dks)dsmk{ds}ds]ds";
+	char string4[] = "fjfd{dkmds(sd[ds]dsd)dsds)ds";
+	char string5[] = "sdsd{dsd(dsdds[sdds)dssd]dsds}ds";
+	char string6[] = "dsd(dsfdj(dskfd{nfm}mf[fdm]fd)fdf{fdf}dfd)";
+	assert(string1, true);
+	assert(string2, true);
+	assert(string3, true);
+	assert(string4, false);
+	assert(string5, false);
+	assert(string6, true);
+}
 
 int main()
 {
+	tests();
 	return 0;
 }
