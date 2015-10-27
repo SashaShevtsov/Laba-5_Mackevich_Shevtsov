@@ -25,7 +25,7 @@ int max(int a, int b)
 	else
 		return b;
 }
-int babyDontHurtMe(char* str)
+int calculated(char* str)
 {
 	int j;
 	int temp = 0;
@@ -66,7 +66,7 @@ int babyDontHurtMe(char* str)
 }
 void assert(char* string, int answer)
 {
-	int firstanswer = babyDontHurtMe(string);
+	int firstanswer = calculated(string);
 	if (firstanswer == answer)
 		cout << "OK" << endl;
 	else
