@@ -1,7 +1,7 @@
 #include <iostream> 
 using namespace std;
 
-bool whatIsLove(char* str)
+bool isBracketsRight(char* str)
 {
 	char s[100] = { 0 };
 	int j = 0;
@@ -62,7 +62,7 @@ bool whatIsLove(char* str)
 }
 void assert(char* string, bool answer)
 {
-	bool firstanswer = whatIsLove(string);
+	bool firstanswer = isBracketsRight(string);
 	if (firstanswer == answer)
 		cout << "OK" << endl;
 	else
