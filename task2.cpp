@@ -84,7 +84,7 @@ void tests()
 	assert(string2, 5);
 	assert(string3, 7);
 	assert(string4, 6);
-	assert(string5, 3);
+	assert(string5, 1);
 	assert(string6, 0);
 }
 int main()
