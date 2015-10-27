@@ -1,6 +1,6 @@
 #include <iostream> 
 using namespace std;
-int delwp(int* ar, int k, int size)
+void delwp(int* ar, int k, int size)
 {
 	int temp;
 	for (int i = k; i < size; i++)
@@ -49,7 +49,7 @@ int babyDontHurtMe(char* str)
 		}
 	}
 	j = temp - 2;
-	while (temp != 1 && j >= 1)
+	while (temp != 1 && j >= 0)
 	{
 		if (a[j] >= 10)
 		{
